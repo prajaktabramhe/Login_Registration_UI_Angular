@@ -15,13 +15,15 @@ import { RegisterComponent } from './Component/register/register.component';
 import { ForgotPasswordComponent } from './Component/forgot-password/forgot-password.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './Component/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    HomeComponent
     
   ],
   imports: [

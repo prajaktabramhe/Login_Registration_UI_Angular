@@ -26,5 +26,8 @@ export class UserserviceService {
   forgotPasswordService(data: any){
     return this.http.Put(this.url + '/forgotpassword', data, '');
   }
+  logout(data: any){
+    return this.http.Post(this.url + '/logout', data, '');
+  }
 
 }

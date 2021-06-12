@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserserviceService } from 'src/app/userservice.service';
 const EMAIL_REGEX = new RegExp("^([a-zA-Z0-9+-])+(\\.?[a-zA-Z0-9_+-])*@[a-zA-Z0-9]+[.][a-zA-Z]{2,3}([.]?[a-zA-Z]{2,3})?$")
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder:FormBuilder,
-    private user: UserserviceService
-    
+    private user: UserserviceService,
+    private router: Router
   ) { 
     this.Login = formBuilder.group(
       {
@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
         email:this.Login.value.email, 
         password:this.Login.value.password
       }
+      this.router.navigate(['/home']);
       console.log(Obj);
 
       this.user.loginService(Obj).subscribe((resp)=>{
