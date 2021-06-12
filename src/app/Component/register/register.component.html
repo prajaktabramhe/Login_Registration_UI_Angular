@@ -1,0 +1,67 @@
+
+  <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center" style="height: 100%;">
+    
+    <mat-card class="box login_card" >
+      <div class="logo">
+        <img src="../../assets/images/BridgeLabz New Logo.svg" alt="logo" style="width: 70%; height: 80px;"/>
+      </div>
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form">
+        <mat-card-content>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>First name</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label> Last Name</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Age</mat-label>
+                  <input type="text" matInput placeholder="25">
+                  </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Telephone</mat-label>
+                <input type="tel" matInput placeholder="555-555-1234">
+                </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="email">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Password">
+              </mat-form-field>
+            </div>
+           
+          </div>
+        </div>
+        </mat-card-content>
+        <div>
+          <a routerLink="/login" mat-button target="_self">Go To Home Page</a>
+        </div>
+        
+        <button mat-raised-button type="submit" class="login_button">Sign In</button>
+      </form>
+    </mat-card>
+  </div>
