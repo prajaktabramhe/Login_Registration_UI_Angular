@@ -9,20 +9,20 @@
         <mat-card-title>Register</mat-card-title>
       </mat-card-header>
   
-      <form class="example-form">
+      <form class="example-form" [formGroup] = "Register" (ngSubmit)="onSubmit()">
         <mat-card-content>
         <div class="container">
           <div class="row">
             <div class="col">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>First name</mat-label>
-                <input matInput>
+                <input matInput formControlName="firstName">
               </mat-form-field>
             </div>
             <div class="col">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label> Last Name</mat-label>
-                <input matInput>
+                <input matInput formControlName="lastName">
               </mat-form-field>
             </div>
           </div>
@@ -30,13 +30,13 @@
             <div class="col">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Age</mat-label>
-                  <input type="text" matInput placeholder="25">
+                  <input type="text" matInput placeholder="25" formControlName="age">
                   </mat-form-field>
             </div>
             <div class="col">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Telephone</mat-label>
-                <input type="tel" matInput placeholder="555-555-1234">
+                <input type="tel" matInput placeholder="555-555-1234" formControlName="mobileNumber">
                 </mat-form-field>
             </div>
           </div>
@@ -44,13 +44,13 @@
             <div class="col">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Email</mat-label>
-                <input type="email" matInput placeholder="email">
+                <input type="email" matInput placeholder="email" formControlName="email">
               </mat-form-field>
             </div>
             <div class="col">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Password</mat-label>
-                <input type="password" matInput placeholder="Password">
+                <input type="password" matInput placeholder="Password" formControlName="password">
               </mat-form-field>
             </div>
            

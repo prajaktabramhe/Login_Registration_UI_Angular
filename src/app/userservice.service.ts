@@ -19,8 +19,12 @@ export class UserserviceService {
     return this.http.Post(this.url + '/login', data, this.options);
   }
 
-  registerService(){}
+  registerService(data: any){
+    return this.http.Post(this.url + '/register', data, this.options);
+  }
 
-  forgotPassword(){}
+  forgotPasswordService(data: any){
+    return this.http.Put(this.url + '/forgotpassword', data, '');
+  }
 
 }
