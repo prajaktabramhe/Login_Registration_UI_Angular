@@ -41,8 +41,8 @@ export class LoginComponent implements OnInit {
       this.user.loginService(Obj).subscribe((resp)=>{
         console.log(resp)
         Response = resp
-        console.log(Response.data)
-        localStorage.setItem('Token',Response.data);
+        console.log(Response.token)
+        localStorage.setItem('Token',Response.token);
       }, (error) => {
         console.log(error);
       
